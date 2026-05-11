@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #0a2540 0%, #00b4d8 100%);
+    min-height: 100vh;
+}
+
+.navbar {
+    background: rgba(10, 37, 64, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #a0f0ff;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(rgba(10,37,64,0.4), rgba(0,180,216,0.3)), url('https://picsum.photos/1920/1080?water') center/cover;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 12px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #00f0ff;
+    color: #0a2540;
+}
+
+.btn-primary:hover {
+    background: #00ffcc;
+    transform: translateY(-5px);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #0a2540;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0,0,0,0.3);
+}
