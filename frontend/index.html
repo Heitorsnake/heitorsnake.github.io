@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilaLivre — Acesso</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="login-corpo">
+    <div class="login-marca">
+      <div class="logo">FILA<span>LIVRE</span></div>
+      <p>Sistema de gerenciamento remoto de caixas de supermercado.
+         Autorizações de cancelamentos, descontos e cupons sem deslocamento físico.</p>
+    </div>
+
+    <div class="abas">
+      <button class="aba ativa" id="aba-login">Entrar</button>
+      <button class="aba" id="aba-cadastro">Criar conta</button>
+    </div>
+
+    <div class="cartao form-cartao">
+      <div class="mensagem-erro" id="erro"></div>
+
+      <form id="form-login" class="ativo">
+        <div class="campo">
+          <label for="login-email">E-mail</label>
+          <input type="email" id="login-email" required autocomplete="email" placeholder="voce@filalivre.com">
+        </div>
+        <div class="campo">
+          <label for="login-senha">Senha</label>
+          <input type="password" id="login-senha" required autocomplete="current-password" placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-verde" style="width:100%">Entrar</button>
+      </form>
+
+      <form id="form-cadastro">
+        <div class="campo">
+          <label for="cad-nome">Nome completo</label>
+          <input type="text" id="cad-nome" required placeholder="Seu nome">
+        </div>
+        <div class="campo">
+          <label for="cad-email">E-mail</label>
+          <input type="email" id="cad-email" required placeholder="voce@filalivre.com">
+        </div>
+        <div class="campo">
+          <label for="cad-senha">Senha (mínimo 6 caracteres)</label>
+          <input type="password" id="cad-senha" required minlength="6" placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-azul" style="width:100%">Criar conta de operador</button>
+      </form>
+    </div>
+
+    <div class="dica-credenciais">
+      Contas de demonstração:<br>
+      Gestor: <code>gerente@filalivre.com</code> / <code>gerente123</code><br>
+      Operador: <code>operador@filalivre.com</code> / <code>operador123</code><br>
+      Administrador: <code>admin@filalivre.com</code> / <code>admin123</code>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
