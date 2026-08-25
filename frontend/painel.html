@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilaLivre — Central de Controle</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="logo">FILA<span>LIVRE</span></div>
+    <div class="subtitulo-topo">Central de Controle</div>
+    <div class="espaco"></div>
+    <button class="btn btn-verde btn-pequeno" id="btn-novo-caixa">+ Novo caixa</button>
+    <div class="usuario-info">
+      <strong id="nome-usuario"></strong>
+      <span class="perfil-badge" id="perfil-usuario"></span>
+    </div>
+    <button class="btn btn-sair btn-pequeno" onclick="sair()">Sair</button>
+  </header>
+
+  <main class="conteudo">
+
+    <section class="secao">
+      <h2>Visão geral</h2>
+      <div class="chips" id="chips-resumo">
+        <div class="chip"><div class="rotulo">Pendentes</div><div class="valor" id="res-pendentes">–</div></div>
+        <div class="chip"><div class="rotulo">Aprovadas</div><div class="valor" style="color:var(--verde)" id="res-aprovadas">–</div></div>
+        <div class="chip"><div class="rotulo">Recusadas</div><div class="valor" style="color:var(--vermelho)" id="res-recusadas">–</div></div>
+        <div class="chip"><div class="rotulo">Tempo médio decisão</div><div class="valor" style="font-size:1.1rem" id="res-tempo">–</div></div>
+        <div class="chip"><div class="rotulo">Caixas em atenção</div><div class="valor" style="color:var(--amarelo)" id="res-atencao">–</div></div>
+      </div>
+    </section>
+
+    <section class="secao">
+      <h2>Solicitações pendentes de decisão</h2>
+      <div class="lista-solicitacoes" id="lista-pendentes"></div>
+    </section>
+
+    <section class="secao">
+      <h2>Painel de caixas</h2>
+      <div class="grid-caixas" id="grid-caixas"></div>
+    </section>
+
+    <section class="secao">
+      <h2>Histórico de ações (auditoria)</h2>
+      <div class="cartao" style="padding:0; overflow-x:auto;">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Momento</th>
+              <th>Usuário</th>
+              <th>Caixa</th>
+              <th>Ação</th>
+              <th>Detalhes</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-historico"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <dialog id="dialog-caixa">
+    <h3>Cadastrar novo caixa</h3>
+    <div class="mensagem-erro" id="erro-caixa"></div>
+    <form method="dialog" id="form-novo-caixa">
+      <div class="campo">
+        <label for="numero-caixa">Número do caixa</label>
+        <input type="number" id="numero-caixa" min="1" required placeholder="Ex.: 7">
+      </div>
+      <div class="dialog-acoes">
+        <button type="button" class="btn btn-cinza" onclick="document.getElementById('dialog-caixa').close()">Cancelar</button>
+        <button type="submit" class="btn btn-verde">Cadastrar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/api.js"></script>
+  <script src="js/painel.js"></script>
+</body>
+</html>
