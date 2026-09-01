@@ -1,0 +1,40 @@
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Java / build outputs
+backend/target/
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Local runtime and DB artifacts
+*.log
+*.db
+*.sqlite
+*.sqlite3
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+database/*.mv.db
+filalivre.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+
+# Maven / Gradle caches (if ever introduced)
+.mvn/
+.gradle/
+
+# Test reports
+coverage/
+htmlcov/
